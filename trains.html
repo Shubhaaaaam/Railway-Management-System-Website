@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains</title>
+</head>
+<style>
+body {
+    background-color: rgba(3, 0, 0, 0.815);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #07d64ce7; /* Red color for the header */
+}
+
+ul{
+    color: aliceblue;
+    text-align: justify;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    padding-inline: 50px;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+.details{
+    list-style-type: none;
+}
+table {
+    width: 100%;
+}
+td {
+    border: 1px solid #ccc;
+}
+/* Optional: Add more styles as needed */
+
+</style>
+<body>
+<form action="/trains" method="POST">
+    <br>
+    <h1>Available Trains</h1>
+    <h2>Train Details</h2>
+    <ul class="details">
+    <table>
+        <tr>
+        <div class="t">
+        <td id="label" style="background-color: white; color: black;">Train Name</td>
+            {% for option in options %}
+                <td style="background-color:white; color: black;">{{ option }}</td>
+            {% endfor %}
+        </div>
+        </tr>
+
+        <tr>
+            <div class="t">
+            <td id="label" style="background-color: white; color: black">Seat Available</td>
+                {% for option in seats %}
+                    <td style="background-color:white; color: black;">{{ option }}</td>
+                {% endfor %}
+            </div>
+        </tr>
+
+        <tr>
+            <div class="t">
+            <td id="label" style="background-color: white; color: black">Train Number</td>
+                {% for option in numbers %}
+                    <td style="background-color:white; color: black;">{{option}}</td>
+                {% endfor %}
+            </div>
+        </tr>
+
+        <tr>
+            <div class="t">
+            <td id="label" style="background-color: white; color: black">Select</td>
+                {% for option in numbers %}
+                    <td><button name="button_clicked" id="select" value="{{ option }}" type="submit" style="width: 100%;">Book</button></td>
+                {% endfor %}
+            </div>
+        </tr>
+
+    </table>
+    </ul>
+    <input name="date" id="date" style="display: none;" value={{date}}></input>
+</form>  
+</body>
+</html>

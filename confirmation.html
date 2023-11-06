@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified</title>
+</head>
+<style>
+body {
+    background-color: rgba(3, 0, 0, 0.815);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #07d64ce7; /* Red color for the header */
+}
+
+p {
+    font-size: 1.2em;
+    color: aliceblue;
+}
+h2{
+    color: #93cc0de8;
+}
+ul{
+    color: aliceblue;
+    text-align: justify;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-inline: 50px;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+.details{
+    list-style-type: none;
+    padding: 5
+}
+.confirm{
+        background-color: #00ff0d9d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+.cancle {
+        background-color: #ff000098;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+/* Optional: Add more styles as needed */
+
+</style>
+<body>
+<form action="/check" method="POST">
+    <br>
+    <h1>Verified</h1>
+    <p>You have the permission to go to platform.</p>
+    <h2>Tickets Details</h2>
+    <ul class="details">
+        {% for item in my_array %}
+            <li>{{ item}}</li>
+        {% endfor %}</ul>
+    <input name="pnr" id="pnr" value={{pnr}} style="display: none;"></input>
+    <button class="confirm" type="submit" name="button_clicked" value="confirm">Confirm</button>
+    <button class="cancle" type="submit" name="button_clicked" value="cancle">Cancle</button>
+</form>  
+</body>
+</html>

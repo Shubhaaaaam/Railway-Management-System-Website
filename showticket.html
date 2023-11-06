@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified</title>
+</head>
+<style>
+body {
+    background-color: rgba(3, 0, 0, 0.815);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #035e21f6; /* Red color for the header */
+}
+
+p {
+    font-size: 1.2em;
+    color: aliceblue;
+}
+h2{
+    color: #93cc0dc5;
+}
+ul{
+    color: aliceblue;
+    text-align: center;
+    
+}
+.details{
+    list-style-type: none;
+    padding: 0
+}
+table {
+    width: 100%;
+    padding: 5px;
+}
+td {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+}
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+    
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add more styles as needed */
+
+</style>
+<body>
+    <form action="/">
+    <br><br><br><br>
+    <h1>Successful</h1>
+    <p>Your Ticket Has Been Successfully Booked</p>
+    <h2>Tickets Details</h2>
+    <ul class="details">
+    <table>
+    <tr>
+    <div >
+        {% for item in my_array %}
+        <td>
+            <li>{{ item}}</li>
+        </td>
+        {% endfor %}
+    </div>
+    </tr>
+    </table>
+    <br><br>
+    <button type="submit" class="btn">Done</button>
+    </ul>    
+    </form>  
+</body>
+</html>

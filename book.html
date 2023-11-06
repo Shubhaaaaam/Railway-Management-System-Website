@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input {
+    width: 25%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+</head>
+<body>
+    <header>
+        <h1>Train Ticket Booking</h1>
+    </header>
+
+    <main>
+        <section id="booking-form">
+            <h2>Book Your Tickets</h2>
+            <form action="/booktickets" method="post">
+                <label>Departure:</label>
+                    <select id="departure" name="departure">
+                        <option value="Delhi">Delhi,NDLS</option>
+                        <option value="Jaipur">Jaipur,JP</option>
+                        <option value="Kolkata">Kolkata,KOAA</option>
+                        <option value="Banglore">Banglore,YPR</option>
+                    </select>
+                    <br></br>
+               
+                <label>Destination:</label>
+                    <select id="destination" name="destination">
+                        <option value="Mumbai">Mumbai,LTT</option>
+                        <option value="Gorakhpur">Gorakhpur,GKP</option>
+                        <option value="Jalpaiguri">Jalpaiguri,NJP</option>
+                        <option value="Varanasi">Varanasi,BSB</option>
+                    </select>
+                <br></br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Train Ticket Booking</p>
+    </footer>
+</body>
+</html>

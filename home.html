@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color:#666;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px white;
+        }
+
+        .button:hover {background-color: #0056b3}
+
+        .button:active {
+            background-color: #0056b3;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br>
+    <h1>Welcome!</h1>
+    <form action="/" method="POST">
+        <button class="button" type="submit" name="button_clicked" value="book">Book Tickets</button>
+        <button class="button" type="submit" name="button_clicked" value="pnr">PNR Verification</button>
+        <button class="button" type="submit" name="button_clicked" value="checkin">Web - Checkin</button>
+    </form>
+</body>
+</html>

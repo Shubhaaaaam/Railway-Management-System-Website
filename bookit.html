@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file (if any) -->
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+</style>
+<body>
+    <form action="/bookit" method="post">
+        <label for="name" style="font-size: 25px;">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="age" style="font-size: 25px;">Age:</label>
+        <input type="number" id="age" name="age" required min="1"><br>
+
+        <label style="font-size: 25px;">Sex:</label>
+        <label for="male"><input type="radio" id="male" name="sex" value="male" required> Male</label>
+        <label for="female"><input type="radio" id="female" name="sex" value="female" required> Female</label>
+        <label for="other"><input type="radio" id="other" name="sex" value="other" required> Other</label><br>
+
+        <label for="contact" style="font-size: 25px;">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}"><br>
+
+        <label for="aadhar" style="font-size: 25px;">Aadhar Number:</label>
+        <input type="text" id="aadhar" name="aadhar" required pattern="[0-9]{12}"><br>
+        <input name="num" id="num" value={{num}} style="display: none;"></input>
+        <input type="submit" value="Submit">
+        <input name="date" id="date" style="display: none;" value={{date}}></input>
+    </form>
+</body>
+</html>

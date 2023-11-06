@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    /* styles.css */
+    body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .login-box {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .textbox {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    .textbox i {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: #888;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        width: 90%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+    }
+    
+    .btn {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>    
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+    <a href="registration.html" class="button">Register??</a>
+</body>
+</html>
