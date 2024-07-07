@@ -26,6 +26,8 @@ Functionality: Shows the booking form pre-filled with selected train details.
 Book It Route (/bookit)
 Purpose: Handles the actual booking of tickets.
 Methods: GET and POST
+
+
 Functionality:
 Generates a random PNR.
 Inserts passenger details into the passenger table.
@@ -47,6 +49,8 @@ Check-in Done Route (/checkindone)
 Purpose: Displays the check-in done page.
 Methods: GET and POST
 Functionality: Simply renders the check-in done template.
+
+
 Templates
 home.html: Home page with options to book, check PNR, or check-in.
 login.html: Login form.
@@ -60,7 +64,9 @@ accessdenied.html: Access denied page.
 checkin.html: Check-in form.
 confirmation.html: Check-in confirmation page.
 checkindone.html: Check-in done page.
-#Summary
+
+
+Summary
 Database Operations: The application interacts with the MySQL database to fetch train details, book tickets, update seat availability, check PNR status, and manage check-in.
 User Authentication: Basic user login is implemented.
 Ticket Booking: Users can book tickets by selecting a train and providing passenger details.
