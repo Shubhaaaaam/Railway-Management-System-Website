@@ -6,10 +6,14 @@ This project is a web application for booking railway tickets, checking PNR stat
 Imports: The project uses Flask for the web framework, Flask-Login for user session management, and MySQL for database operations.
 Database Connection: Connects to a MySQL database named "railway" with specified credentials.
 Flask App Initialization: Initializes the Flask application and sets a secret key for session management.
-2. Routes and Functions
+
+
+3. Routes and Functions
 Home Route (/)
 Purpose: Displays the home page with options to book tickets, check PNR, or check-in.
 Methods: GET and POST
+
+
 Functionality: Depending on the button clicked, it redirects to the appropriate page.
 Login Route (/login)
 Purpose: Handles user login.
@@ -26,8 +30,6 @@ Functionality: Shows the booking form pre-filled with selected train details.
 Book It Route (/bookit)
 Purpose: Handles the actual booking of tickets.
 Methods: GET and POST
-
-
 Functionality:
 Generates a random PNR.
 Inserts passenger details into the passenger table.
