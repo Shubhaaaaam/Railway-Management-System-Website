@@ -60,7 +60,7 @@ accessdenied.html: Access denied page.
 checkin.html: Check-in form.
 confirmation.html: Check-in confirmation page.
 checkindone.html: Check-in done page.
-Summary
+#Summary
 Database Operations: The application interacts with the MySQL database to fetch train details, book tickets, update seat availability, check PNR status, and manage check-in.
 User Authentication: Basic user login is implemented.
 Ticket Booking: Users can book tickets by selecting a train and providing passenger details.
